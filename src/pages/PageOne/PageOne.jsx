@@ -5,10 +5,9 @@ import Header from '../../components/Header/Header';
 
 function PageOne() {
     return (
-        <>
-        <Header/>
-        <ChatWindow/>
-        </>
+        <section className="container">
+            <ChatWindow/>
+        </section>
 
     )
 }
