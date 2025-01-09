@@ -1,0 +1,24 @@
+@use "../../partials/variables" as *;
+
+.bubble {
+  display: flex;
+  flex-direction: column;
+  background-color: $Color-background;
+
+  &__text {
+    padding: 8px;
+    border-radius: 8px;
+    min-width: 80px;
+    max-width: 120px;
+    margin: 8px;
+  }
+
+  &__customer {
+    align-self: flex-end;
+    background-color: $Color-bubble;
+  }
+
+  &__advisor {
+    background-color: white;
+  }
+}
