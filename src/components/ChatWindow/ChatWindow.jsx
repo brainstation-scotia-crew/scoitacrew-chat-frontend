@@ -1,5 +1,6 @@
 import './ChatWindow.scss';
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 
 function ChatWindow() {
     const [formData, setFormData] = useState({
@@ -101,9 +102,11 @@ function ChatWindow() {
                         )}
                     </div>
 
-                    <button className="information__button" type="submit">
-                        Start Chat
-                    </button>
+                    <Link to = "/chat">
+                        <button className="information__button" type="submit">
+                            Start Chat
+                        </button>
+                    </Link>
                 </form>
         </>
     );
