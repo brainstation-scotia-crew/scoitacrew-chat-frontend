@@ -4,6 +4,7 @@ import "./pages/PageOne/PageOne";
 import PageOne from "./pages/PageOne/PageOne";
 import MessageBubble from "./components/MessageBubble/MessageBubble";
 import MessageInput from "./components/MessageInput/MessageInput";
+import PageTwo from "./pages/PageTwo/PageTwo";
 
 function App() {
   return (
@@ -11,9 +12,8 @@ function App() {
       {/* <ScrollToTop/> */}
       <Routes>
         <Route path="/" element={<PageOne />} />
+        <Route path="/chat" element={<PageTwo />} />
       </Routes>
-      <MessageBubble />
-      <MessageInput />
       {/* <Footer/> */}
     </BrowserRouter>
   );
