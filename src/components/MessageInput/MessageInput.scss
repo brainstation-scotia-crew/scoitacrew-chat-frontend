@@ -11,16 +11,23 @@ svg {
   border-radius: 10px;
   padding: 16px;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   background-color: white;
   height: 120px;
   margin: 16px;
 
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+  }
+
   &__text {
     border: none;
-    align-self: flex-start;
-    width: 420px;
+    width: 260px;
+    height: 60px;
     text-wrap: wrap;
+    align-self: flex-start;
 
     &:focus {
       outline: none;
