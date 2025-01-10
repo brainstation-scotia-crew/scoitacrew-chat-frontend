@@ -1,0 +1,15 @@
+@use '../../partials/mixins' as *;
+@use '../../partials/variables' as *;
+@use '../../partials/global' as *;
+
+.header {
+    padding: 1rem 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &__logo {
+        max-width: 50px;
+        max-height: 50px;
+    }
+}

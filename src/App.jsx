@@ -5,11 +5,13 @@ import PageOne from "./pages/PageOne/PageOne";
 import MessageBubble from "./components/MessageBubble/MessageBubble";
 import MessageInput from "./components/MessageInput/MessageInput";
 import PageTwo from "./pages/PageTwo/PageTwo";
+import Header from "./components/Header/Header";
 
 function App() {
   return (
     <BrowserRouter>
       {/* <ScrollToTop/> */}
+      <Header/>
       <Routes>
         <Route path="/" element={<PageOne />} />
         <Route path="/chat" element={<PageTwo />} />
