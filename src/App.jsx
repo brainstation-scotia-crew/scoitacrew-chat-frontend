@@ -4,6 +4,7 @@ import "./pages/PageOne/PageOne";
 import PageOne from "./pages/PageOne/PageOne";
 import PageTwo from "./pages/PageTwo/PageTwo";
 import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
         <Route path="/" element={<PageOne />} />
         <Route path="/chat" element={<PageTwo />} />
       </Routes>
-      {/* <Footer/> */}
+      <Footer/>
     </BrowserRouter>
   );
 }

@@ -15,11 +15,11 @@
 
   &__customer {
     align-self: flex-end;
-    background-color: $Color-darkRed;
+    background-color: $Color-red;
     color: $Color-white;
   }
 
   &__advisor {
-    background-color: white;
+    background-color: $Color-background;
   }
 }
