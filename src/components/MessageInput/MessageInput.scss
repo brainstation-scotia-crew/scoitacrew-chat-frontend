@@ -24,8 +24,11 @@ svg {
   }
 
   &__text {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
     border: none;
-    width: 260px;
+    
     height: 60px;
     text-wrap: wrap;
     align-self: flex-start;
