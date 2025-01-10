@@ -10,13 +10,18 @@ function PageTwo() {
   ]);
 
   const addMessage = (text) => {
-    setMessages([...messages, { sender: "customer", text }]);
+    setMessages((prevMessages) => [
+      ...prevMessages,
+      { sender: "customer", text },
+    ]);
   };
 
   const addadvMessage = (text) => {
-    setMessages([...messages, { sender: "advisor", text }]);
+    setMessages((prevMessages) => [
+      ...prevMessages,
+      { sender: "advisor", text },
+    ]);
   };
-
 
   return (
     <div className="chat">
