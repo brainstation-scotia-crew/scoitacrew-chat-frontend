@@ -1,0 +1,16 @@
+@use '../../partials/mixins' as *;
+@use '../../partials/variables' as *;
+@use '../../partials/global' as *;
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+
+    &__text {
+        color: $Color-red;
+        font-weight: bold;
+        
+    }
+}
