@@ -1,0 +1,15 @@
+@use "../../partials/variables" as *;
+
+body,
+html {
+  margin: 0;
+  background-color: $Color-background;
+  height: 100%;
+}
+
+.chat {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

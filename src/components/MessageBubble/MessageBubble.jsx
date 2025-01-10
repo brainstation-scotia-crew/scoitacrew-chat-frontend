@@ -1,13 +1,18 @@
 import "./MessageBubble.scss";
 
-export default function MessageBubble() {
-  const customer = ["Hello advisor"];
-  const advisor = ["Hi, how can I help you today?"];
-
+export default function MessageBubble({ messages }) {
   return (
     <div className="bubble">
-      <div className="bubble__text bubble__customer">{customer}</div>
-      <div className="bubble__text bubble__advisor">{advisor}</div>
+      {messages.map((message, index) => (
+        <div
+          key={index}
+          className={`bubble__text bubble__${
+            message.sender === "customer" ? "customer" : "advisor"
+          }`}
+        >
+          {message.text}
+        </div>
+      ))}
     </div>
   );
 }
