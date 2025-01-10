@@ -6,7 +6,7 @@ function Header () {
         <>
         <div className="header">
             <img src={scotiaLogo} alt='Scotiabank Logo' className='header__logo'/>
-            <p className="header__te">Connect with an advisor</p>
+            <p className="header__te">Connect with a Scotibank Wealth Management specialist</p>
         </div>
         </>
     )
