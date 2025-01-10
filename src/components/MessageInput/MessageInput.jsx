@@ -1,8 +1,27 @@
 import "./MessageInput.scss";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { getToken, queueUp, connect, sendMessage } from "/src/scripts/api.js";
 
 export default function MessageInput({ addMessage }) {
   const [message, setMessage] = useState("");
+  const [token, setToken] = useState(null);
+  const [messages, setMessages] = useState([]);
+
+  useEffect(() => {
+    const initialize = async () => {
+      try {
+        document.title = "Connecting to advisor...";
+        const response = await getToken();
+        setToken(response.token);
+
+        await queueUp(response.token, "customer");
+        connect(response.token, handleIncomingMessage);
+      } catch (error) {
+        console.error("Couldn't initialize:", error);
+      }
+    };
+    initialize();
+  }, []);
 
   const handleInputChange = (event) => {
     setMessage(event.target.value);
@@ -11,6 +30,13 @@ export default function MessageInput({ addMessage }) {
   const handleSubmit = async (event) => {
     event.preventDefault();
     addMessage(message);
+
+    try {
+      await sendMessage(token, message);
+    } catch (error) {
+      console.error(error);
+    }
+
     setMessage("");
   };
 
