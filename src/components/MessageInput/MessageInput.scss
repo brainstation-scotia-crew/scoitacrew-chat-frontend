@@ -1,17 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+svg {
+  background-color: white;
+}
+
 .input {
   border: 1px solid black;
   border-radius: 10px;
   padding: 16px;
   display: flex;
   justify-content: space-between;
+  background-color: white;
+  height: 120px;
+  margin: 16px;
 
   &__text {
     border: none;
+    align-self: flex-start;
+    width: 420px;
+    text-wrap: wrap;
+
+    &:focus {
+      outline: none;
+    }
   }
 
   &__button {
     border: none;
-    background-color: white;
     padding: 0;
+    background-color: white;
+    align-self: flex-end;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }

@@ -1,6 +1,19 @@
 import "./MessageInput.scss";
+import { useState } from "react";
 
-export default function MessageInput() {
+export default function MessageInput({ addMessage }) {
+  const [message, setMessage] = useState("");
+
+  const handleInputChange = (event) => {
+    setMessage(event.target.value);
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    addMessage(message);
+    setMessage("");
+  };
+
   return (
     <div className="input">
       <input
@@ -8,8 +21,11 @@ export default function MessageInput() {
         type="text"
         placeholder="Enter message here..."
         name="message"
+        value={message}
+        onChange={handleInputChange}
       ></input>
-      <button className="input__button">
+      <div className="input__flex"></div>
+      <button className="input__button" onClick={handleSubmit} type="submit">
         <svg
           width="16px"
           height="16px"
