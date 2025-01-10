@@ -13,10 +13,15 @@ function PageTwo() {
     setMessages([...messages, { sender: "customer", text }]);
   };
 
+  const addadvMessage = (text) => {
+    setMessages([...messages, { sender: "advisor", text }]);
+  };
+
+
   return (
     <div className="chat">
       <MessageBubble messages={messages} />
-      <MessageInput addMessage={addMessage} />
+      <MessageInput addMessage={addMessage} addadvMessage={addadvMessage} />
     </div>
   );
 }
