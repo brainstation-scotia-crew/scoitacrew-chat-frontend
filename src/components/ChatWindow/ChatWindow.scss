@@ -29,9 +29,13 @@
         overflow: hidden;
         width: 100%;
 
-        border: 1px solid $Color-darkGray;
+        border: 1px solid $Color-background;
         border-radius: 50px;
         background-color: $Color-background;
+
+        &:active, &:focus {
+            border: 1px solid $Color-darkGray;
+        }
 
     }
 
@@ -60,4 +64,7 @@ textarea {
 
 p.error {
     margin: 0;
+    font-size: 0.75rem;
+    color: $Color-red;
+    padding-left: 0.5rem;
 }
