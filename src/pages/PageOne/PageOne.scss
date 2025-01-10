@@ -1,4 +1,14 @@
+@use '../../partials/mixins' as *;
+@use '../../partials/variables' as *;
 
 .container {
     padding: 1rem 1rem;
+
+    @include tablet {
+        padding: 1rem 3rem;
+    }
+
+    @include desktop {
+        padding: 1rem 8rem;
+    }
 }
