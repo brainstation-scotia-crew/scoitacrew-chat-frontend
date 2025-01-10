@@ -5,10 +5,10 @@
     padding: 1rem 1rem;
 
     @include tablet {
-        padding: 1rem 3rem;
+        padding: 2rem 5rem;
     }
 
     @include desktop {
-        padding: 1rem 8rem;
+        padding: 4rem 15rem;
     }
 }

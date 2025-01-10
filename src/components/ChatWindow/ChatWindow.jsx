@@ -1,8 +1,11 @@
 import './ChatWindow.scss';
 import React, { useState } from "react";
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 
 function ChatWindow() {
+    const navigate = useNavigate(); 
+
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -62,7 +65,7 @@ function ChatWindow() {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (validate()) {
-            alert("Form submitted successfully!");
+            navigate("/chat");
             
         }
     };
@@ -72,6 +75,7 @@ function ChatWindow() {
                 <form onSubmit={handleSubmit} className="information">
                     <div className="information__area">
                         <textarea
+                            className='information__textarea'
                             name="name"
                             placeholder="Full Name"
                             value={formData.name}
@@ -82,6 +86,7 @@ function ChatWindow() {
 
                     <div className="information__area">
                         <textarea
+                            className='information__textarea'
                             name="email"
                             placeholder="Email"
                             value={formData.email}
@@ -92,6 +97,7 @@ function ChatWindow() {
 
                     <div className="information__area">
                         <textarea
+                            className='information__textarea'
                             name="contactNumber"
                             placeholder="Contact Number"
                             value={formData.contactNumber}
@@ -102,11 +108,9 @@ function ChatWindow() {
                         )}
                     </div>
 
-                    <Link to = "/chat">
-                        <button className="information__button" type="submit">
-                            Start Chat
-                        </button>
-                    </Link>
+                    <button className="information__button" type="submit">
+                        Start Chat
+                    </button>
                 </form>
         </>
     );

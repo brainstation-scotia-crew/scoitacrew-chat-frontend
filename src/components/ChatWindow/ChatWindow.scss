@@ -1,5 +1,6 @@
 @use '../../partials/mixins' as *;
 @use '../../partials/variables' as *;
+@use '../../partials/global' as *;
 
 .information {
     display: flex;
@@ -7,16 +8,56 @@
     align-items: flex-start;
     justify-content: space-around;
     gap: 1.5rem;
-    width: 100%;
 
     &__area {
         display: flex;
         flex-direction: column;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 4px;
         width: 100%;
 
+    }
+
+    &__textarea {
+        height: 3rem;
+        line-height: 2rem;
+        display: flex;
+        align-items: center;
+        padding: 0.5rem 1rem;
+        overflow: hidden;
+        width: 100%;
+
+        border: 1px solid $Color-darkGray;
+        border-radius: 50px;
+        background-color: $Color-background;
+
+    }
+
+    &__button {
+        width: 9rem;
+        height: 3.6rem;
+        border-radius: 50px;
+        padding: 0.5rem 1rem;
+        align-self: center;
+
+        background-color: $Color-white;
+
+        &:hover {
+            background-color: $Color-black;
+            border: 1px solid $Color-white;
+            color: $Color-white;
+        }
     }
 }
 
 textarea {
+    border: none;
+    outline: none;
     resize: none;
+}
+
+p.error {
+    margin: 0;
 }
